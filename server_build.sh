@@ -71,6 +71,6 @@ if
 then
 	echo "The server is up and the site has been changed"
 else
-	echo "Something went wrong please check the site or the /tmp/tempssh.log"
+	echo "Something went wrong please check the site or the tempssh.tmp"
 fi
 rm $servertemp
