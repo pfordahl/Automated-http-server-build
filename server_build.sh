@@ -57,7 +57,7 @@ echo "Server:"$instanceID "is" $serverstatus
  ssh -t -t  -i $sshkeypath$key $sshoptions $user@$serverdns <<stop >tempssh.tmp
 	sudo yum install httpd -y
 	sudo su root
-	sudo echo "Hello Stelligent" > /var/www/html/index.html 
+	sudo echo "Hello the server is up" > /var/www/html/index.html 
 	sudo service httpd restart
 	exit
 	exit
@@ -67,7 +67,7 @@ stop
 wwwsite=`curl http://$serverdns`
 
 if
-	[ "$wwwsite" == "Hello Stelligent" ]
+	[ "$wwwsite" == "Hello the server is up" ]
 then
 	echo "The server is up and the site has been changed"
 else
